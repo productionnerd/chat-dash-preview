@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --main: #2151ff;
+    --shadow: 4px 6px 42px -16px rgba(0, 0, 0, 0.63);
+    --gray: #5e5e5e;
+    --lightgray: lightgray;
+}
+
+* {
+    font-family: 'poppins';
+}
+
+
+/*utility classes */
+
+.border-pill {
+    border-radius: 50vw;
+}
+
+.flex-column {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.flex-c-c {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-ce-ce {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-start-ce {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-space-even-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.c-flex {
+    flex-direction: column;
+    display: flex;
+}
+
+.r-flex {
+    flex-direction: row;
+    display: flex;
+}
+
+.padding-5px10px {
+    padding: 5px 10px;
+}
+
+.padding-5px5px {
+    padding: 5px;
+}
+
+.flex-center-start {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/*utility classes */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 0.25fr 0.35fr 1fr 0.40fr;
+}
+
+.nav {
+    background-color: white;
+    height: 100vh;
+    border-right: 1px solid var(--lightgray);
+    display: flex;
+    gap: 20px;
+}
+
+.messages {
+    border-right: 1px solid var(--lightgray);
+}
+
+.page {
+    color: var(--gray);
+    margin-block-start: 20px;
+    display: inline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.page i {
+    color: var(--gray);
+    margin-inline-end: 10px;
+}
+
+.page svg {
+    transform: scale(1.3);
+    margin-inline-end: 10px;
+}
+
+.active {
+    padding: 7.5px 10px;
+    border-radius: 50vw;
+    outline: 2px solid var(--main);
+}
+
+.chat-window {
+    width: 100%;
+    height: 85vh;
+}
+
+.input {
+    outline: 2px solid var(--main);
+    border-radius: 50vw;
+    height: 7.5vh;
+    margin-block-start: 10px;
+    width: 85%;
+}
+
+.input input {
+    height: 100%;
+    border-style: hidden;
+    width: 91%;
+    margin-inline-start: 15px;
+    font-weight: 600;
+}
+
+.input input:focus {
+    outline: none;
+}
+
+.input i {
+    color: gray;
+}
+
+.details {
+    border-left: 1px solid var(--lightgray);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: 600;
+    color: #5e5e5e;
+}
+
+.chat-details {
+    outline: 1px solid var(--lightgray);
+    border-radius: 20px;
+    padding: 20px 20px;
+    margin-block-start: 15px;
+}
+
+.how-much {
+    margin-inline-start: 20px;
+}
+
+.open {
+    background-color: rgba(144, 238, 144, 0.516);
+    border-radius: 50vw;
+}
+
+.Important {
+    background-color: rgba(255, 204, 0, 0.402);
+    border-radius: 50vw;
+}
+
+.chat-maker {
+    border-radius: 50vw;
+    outline: 1.5px solid var(--main);
+}
+
+.circ {
+    width: 10px;
+    height: 10px;
+    margin-inline-end: 5px;
+}
+
+.circ-green {
+    background-color: rgb(69, 171, 69);
+}
+
+.circ-yellow {
+    background-color: rgb(204, 163, 0);
+}
+
+.message {
+    width: 85%;
+    margin-block-start: 10px;
+    border-radius: 10px;
+    font-size: .65em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.message:hover {
+    transform: scale(1.1);
+}
+
+.what {
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-inline-end: 5px;
+}
+
+.time {
+    background-color: var(--lightgray);
+    font-weight: 600;
+}
+
+.maker {
+    font-weight: 600;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+.img {
+    outline: 1px solid var(--lightgray);
+    margin-inline-end: 5px;
+}
+
+.type {
+    margin-block: 10px 10px;
+}
+
+.line {
+    background-color: var(--lightgray);
+    margin-block-start: 10px;
+    width: 35%;
+    height: 0.5%;
+}
+
+
+/* reset */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
