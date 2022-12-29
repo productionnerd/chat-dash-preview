@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
     --main: #2151ff;
-    --shadow: 4px 6px 42px -16px rgba(0, 0, 0, 0.63);
+    --shadow: 4px 6px 42px -16px rgba(0, 0, 0, 0.43);
     --gray: #5e5e5e;
     --lightgray: lightgray;
 }
@@ -95,7 +95,7 @@
 .page {
     color: var(--gray);
     margin-block-start: 20px;
-    display: inline;
+    display: flex;
     font-weight: 600;
     cursor: pointer;
 }
@@ -149,17 +149,17 @@
     border-left: 1px solid var(--lightgray);
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     font-weight: 600;
     color: #5e5e5e;
+    flex-direction: column;
 }
 
 .chat-details {
-    outline: 1px solid var(--lightgray);
-    border-radius: 20px;
-    padding: 20px 20px;
-    margin-block-start: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--lightgray);
+    width: 100%;
 }
 
 .how-much {
@@ -176,9 +176,22 @@
     border-radius: 50vw;
 }
 
+.email-display {
+    background-color: rgba(91, 91, 91, 0.402);
+    border-radius: 50vw;
+    font-size: 10px;
+    margin-inline-start: 10px;
+}
+
+.time-display {
+    background-color: rgba(0, 82, 141, 0.402);
+    border-radius: 50vw;
+    font-size: 10px;
+    margin-inline-start: 10px;
+}
+
 .chat-maker {
     border-radius: 50vw;
-    outline: 1.5px solid var(--main);
 }
 
 .circ {
@@ -193,6 +206,14 @@
 
 .circ-yellow {
     background-color: rgb(204, 163, 0);
+}
+
+.circ-gray {
+    background-color: rgb(91, 91, 91);
+}
+
+.circ-blue {
+    background-color: rgb(0, 82, 141)
 }
 
 .message {
@@ -236,10 +257,39 @@
 }
 
 .line {
-    background-color: var(--lightgray);
+    background-color: black;
     margin-block-start: 10px;
     width: 35%;
-    height: 0.5%;
+    height: 0.4%;
+}
+
+.detaill {
+    margin-block-end: 5px;
+    border-bottom: 1px solid var(--lightgray);
+    width: 100%;
+    padding-block: 20px;
+    text-align: center;
+}
+
+.thing {
+    color: black;
+    font-weight: 700;
+}
+
+.small {
+    transform: scale(0.75);
+    color: black;
+}
+
+.top-bar {
+    width: 100%;
+    border-bottom: 1px solid var(--lightgray);
+    height: 36.5px;
+}
+
+.botprofile {
+    margin-inline-end: 10px;
+    transform: scale(1.3);
 }
 
 
