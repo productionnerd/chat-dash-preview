@@ -72,8 +72,72 @@
     justify-content: flex-start;
 }
 
+.but-standard {
+    background-color: white;
+    outline: 1.5px solid var(--main);
+    color: var(--main);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.but-fill {
+    background-color: var(--main);
+    outline: 1.5px solid var(--main);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.but-fill:hover {
+    background-color: white;
+    color: var(--main);
+}
+
+.but-standard:hover {
+    background-color: var(--main);
+    color: white;
+}
+
+.m-end-10 {
+    margin-inline-end: 10px;
+}
+
+.m-start-10 {
+    margin-inline-start: 10px;
+}
+
+.m-inline-10 {
+    margin-inline: 10px;
+}
+
+.m-top-10 {
+    margin-block-start: 10px;
+}
+
+.m-botom-10 {
+    margin-block-end: 10px;
+}
+
+.m-block-10 {
+    margin-block: 10px;
+}
+
+.p-y-11 {
+    padding-block: 11px;
+}
+
 
 /*utility classes */
+
+.buttons button {
+    margin-inline-start: 5px;
+}
+
+.but-icon {
+    margin-inline-end: 5px;
+}
 
 .main-container {
     display: grid;
@@ -118,14 +182,14 @@
 
 .chat-window {
     width: 100%;
-    height: 85vh;
+    height: 100%;
 }
 
 .input {
     outline: 2px solid var(--main);
     border-radius: 50vw;
     height: 7.5vh;
-    margin-block-start: 10px;
+    margin-block-end: 10px;
     width: 85%;
 }
 
@@ -225,6 +289,10 @@
     transition: 0.5s;
 }
 
+.fa-paper-plane {
+    transition: 0.5s;
+}
+
 .message:hover {
     transform: scale(1.1);
 }
@@ -257,10 +325,10 @@
 }
 
 .line {
-    background-color: black;
+    background-color: rgb(55, 55, 55);
     margin-block-start: 10px;
     width: 35%;
-    height: 0.4%;
+    height: 0.3%;
 }
 
 .detaill {
@@ -269,6 +337,8 @@
     width: 100%;
     padding-block: 20px;
     text-align: center;
+    color: black;
+    font-weight: 800;
 }
 
 .thing {
@@ -284,7 +354,6 @@
 .top-bar {
     width: 100%;
     border-bottom: 1px solid var(--lightgray);
-    height: 36.5px;
 }
 
 .botprofile {
