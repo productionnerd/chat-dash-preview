@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/80c5496e3a.js" crossorigin="anonymous"></script>
 </head>
+<ul class="notifications">
+</ul>
 
 <body>
     <div class="main-container">
@@ -80,10 +82,10 @@
                 <div class="maker m-inline-10 r-flex flex-space-even-center ">
                     <div class="img padding-5px5px border-pill flex-ce-ce "><img src="profile-bot.svg " alt=" "></div> userexample1</div>
                 <div class="buttons ">
-                    <button class="change-priority but-standard border-pill padding-5px10px"><i class="fa-solid fa-exclamation but-icon"></i>Change Priority</button>
-                    <button class="label but-standard border-pill padding-5px10px"><i class="fa-solid fa-tags but-icon"></i>Label</button>
-                    <button class="transfer but-standard border-pill padding-5px10px"><i class="fa-solid fa-arrow-right-arrow-left but-icon"></i>Transfer</button>
-                    <button class="close but-fill border-pill padding-5px10px"><i class="fa-solid fa-lock but-icon"></i>Close</button>
+                    <button id="error" class="toastbtn change-priority but-standard border-pill padding-5px10px"><i class="fa-solid fa-exclamation but-icon"></i>Change Priority</button>
+                    <button id="success" class="toastbtn label but-standard border-pill padding-5px10px"><i class="fa-solid fa-tags but-icon"></i>Label</button>
+                    <button id="success" class="toastbtn transfer but-standard border-pill padding-5px10px"><i class="fa-solid fa-arrow-right-arrow-left but-icon"></i>Transfer</button>
+                    <button id="success" class="toastbtn close but-fill border-pill padding-5px10px"><i class="fa-solid fa-lock but-icon"></i>Close</button>
                 </div>
             </div>
             <div class="chat-window">
@@ -103,7 +105,7 @@
                 </div>
                 <div class="creator type r-flex flex-ce-ce ">
                     <div class="thing ">Creator</div>
-                    <div class="maker small r-flex flex-space-even-center ">
+                    <div class=" small r-flex flex-space-even-center ">
                         <div class="img padding-5px5px border-pill flex-ce-ce "><img src="profile-bot.svg " alt=" "></div> userexample1</div>
                 </div>
                 <div class="priority type r-flex flex-ce-ce ">
@@ -114,7 +116,7 @@
             </div>
             <div class="detaill ">User Details</div>
             <div class="user-details chat-details flex-space-even-center c-flex ">
-                <div class="maker small r-flex flex-space-even-center ">
+                <div class=" small r-flex flex-space-even-center ">
                     <div class="img padding-5px5px border-pill flex-ce-ce "><img src="profile-bot.svg " alt=" "></div> userexample1</div>
                 <div class="email type flex-ce-ce r-flex ">
                     <div class="thing ">Email</div>
