@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
-    --main: #2151ff;
+    --color-light: #2176ff;
+    --color-primary-500: #2151ff;
+    --color-primary-600: #283db9;
+    --color-primary-700: #242a77;
+    --color-primary-800: #19193c;
+    --color-primary-900: #000000;
+    --main: var(--color-primary-500);
     --shadow: 4px 6px 42px -16px rgba(0, 0, 0, 0.43);
     --gray: #5e5e5e;
     --lightgray: lightgray;
@@ -72,38 +78,38 @@
     padding: 5px;
 }
 
+.p-705px1205px {
+    padding: 7.5px 12.5px;
+}
+
 .flex-center-start {
     align-items: center;
     display: flex;
     justify-content: flex-start;
 }
 
-.but-standard {
-    background-color: white;
-    outline: 1.5px solid var(--main);
-    color: var(--main);
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.but-fill {
-    background-color: var(--main);
-    outline: 1.5px solid var(--main);
+.but-light {
+    background-color: var(--color-light);
     color: white;
     border: none;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.but-fill:hover {
-    background-color: white;
-    color: var(--main);
-}
-
-.but-standard:hover {
+.but-main {
     background-color: var(--main);
     color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.but-main:hover {
+    background-color: var(--color-primary-700);
+}
+
+.but-light:hover {
+    background-color: var(--main);
 }
 
 .m-end-10 {
@@ -130,139 +136,20 @@
     margin-block: 10px;
 }
 
-.p-y-11 {
-    padding-block: 11px;
+.p-y-105 {
+    padding-block: 10.5px;
 }
 
 
 /*utility classes */
 
-.notifications :where(.toast,
-.column) {
-    display: flex;
-    align-items: center;
+.chat {
+    background-color: rgb(241, 241, 241);
 }
 
-.toast::before {
-    position: absolute;
-    content: '';
-    height: 3px;
-    width: 100%;
-    bottom: 0px;
-    left: 0px;
-    border-radius: 50vw;
-    animation: progress 5s linear forwards;
-}
-
-@keyframes progress {
-    100% {
-        width: 0%;
-    }
-}
-
-.toast.success::before {
-    background-color: var(--success);
-}
-
-.toast.error::before {
-    background-color: var(--error);
-}
-
-.toast.warning::before {
-    background-color: var(--warning);
-}
-
-.toast.info::before {
-    background-color: var(--info);
-}
-
-.toast.success .column i {
-    color: var(--success);
-}
-
-.toast.error .column i {
-    color: var(--error);
-}
-
-.toast.warning .column i {
-    color: var(--warning);
-}
-
-.toast.info .column i {
-    color: var(--info);
-}
-
-.toast .column i {
-    font-size: 1.75rem;
-}
-
-.toast .column span {
-    font-size: 1.07rem;
-    margin-left: 12px;
-}
-
-.toast i:last-child {
-    color: #aeb0d7;
-    cursor: pointer;
-}
-
-.toast i:last-child:hover {
-    color: var(--light);
-}
-
-.notifications {
-    position: fixed;
-    top: 30px;
-    right: 20px;
-}
-
-.notifications .toast {
-    position: relative;
-    width: 400px;
-    list-style: none;
-    border-radius: 4px;
-    padding: 16px 17px;
-    margin-block-end: 10px;
-    background: var(--dark);
-    justify-content: space-between;
-    overflow: hidden;
-    animation: show_toast 0.3s ease forwards;
-    color: var(--light);
-    z-index: 100;
-}
-
-@keyframes show_toast {
-    0% {
-        transform: translateX(100%);
-    }
-    40% {
-        transform: translateX(-5%);
-    }
-    80% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-10px);
-    }
-}
-
-.notifications .toast.hide {
-    animation: hide_toast 0.3s ease forwards;
-}
-
-@keyframes hide_toast {
-    0% {
-        transform: translateX(-10px);
-    }
-    40% {
-        transform: translateX(0%);
-    }
-    80% {
-        transform: translateX(-5%);
-    }
-    100% {
-        transform: translateX(calc(100% + 20px));
-    }
+.buttons {
+    margin-inline-start: auto;
+    margin-inline-end: 10px;
 }
 
 .buttons button {
@@ -323,16 +210,34 @@
     outline: 2px solid var(--main);
     border-radius: 50vw;
     height: 7.5vh;
-    margin-block-end: 10px;
-    width: 85%;
+    margin-block-end: 15px;
+    width: 95%;
+    background-color: white;
+}
+
+.actions {
+    border: none;
+    cursor: pointer;
+    background-color: var(--main);
+    color: white;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+.actions:hover {
+    background-color: var(--color-primary-700);
+}
+
+.fa-bolt {
+    color: white !important;
 }
 
 .input input {
     height: 100%;
     border-style: hidden;
-    width: 91%;
-    margin-inline-start: 15px;
+    width: 79%;
     font-weight: 600;
+    background-color: white;
 }
 
 .input input:focus {
@@ -421,10 +326,27 @@
     font-size: .65em;
     cursor: pointer;
     transition: 0.5s;
+    margin-block-end: 10px;
+    padding: 2px;
+}
+
+.activemsg .time {
+    background-color: rgb(116, 116, 116);
+}
+
+.m {
+    margin-inline-start: 5px;
+    margin-block-end: 5px;
+}
+
+.activemsg {
+    background-color: var(--lightgray);
+    overflow: hidden;
 }
 
 .fa-paper-plane {
     transition: 0.5s;
+    margin-inline-end: 10px;
 }
 
 .message:hover {
@@ -447,6 +369,7 @@
     font-weight: 600;
     margin-block: 5px;
     z-index: 0;
+    margin-inline-start: 5px;
 }
 
 .img {
@@ -483,18 +406,60 @@
 .small {
     font-size: 12px;
     color: black;
-    margin-inline-start: 5px;
+    margin-inline-start: 19px;
 }
 
 .top-bar {
     width: 100%;
     border-bottom: 1px solid var(--lightgray);
+    background-color: white;
 }
 
 .botprofile {
     margin-inline-end: 10px;
     transform: scale(1.3);
 }
+
+.activemsg .img {
+    outline: 1px solid var(--gray);
+}
+
+
+/* Media */
+
+@media (max-width: 924px) {
+    .what {
+        max-width: 70px;
+    }
+    .input input {
+        width: 65%;
+    }
+    .thing {
+        font-size: 12px;
+    }
+    .email-display {
+        font-size: 8px;
+    }
+    .circ {
+        width: 7.5px;
+        height: 7.5px;
+    }
+    .top-btn-close {
+        display: none;
+    }
+    .time {
+        font-size: 8px;
+    }
+}
+
+@media (max-height: 600px) {
+    .input {
+        height: 9.5vh;
+    }
+}
+
+
+/* Media */
 
 
 /* reset */

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="toastnotifs.css">
     <script src="https://kit.fontawesome.com/80c5496e3a.js" crossorigin="anonymous"></script>
 </head>
 <ul class="notifications">
@@ -23,6 +24,15 @@
             <div class="page"><i class="fa-solid fa-gears"></i></i>Prefrences</div>
         </div>
         <div class="messages flex-column flex-center-start">
+            <div class="message activemsg flex-start-ce c-flex">
+                <div class="maker r-flex flex-space-even-center">
+                    <div class="img padding-5px5px border-pill flex-ce-ce"><img src="profile-bot.svg" alt=""></div> userexample1</div>
+                <div class="m r-flex flex-ce-ce">
+                    <div class="what">example message here because they are very very very confusing</div>
+                    <div class="time padding-5px5px border-pill">2 min ago</div>
+                </div>
+            </div>
+
             <div class="message flex-start-ce c-flex">
                 <div class="maker r-flex flex-space-even-center">
                     <div class="img padding-5px5px border-pill flex-ce-ce"><img src="profile-bot.svg" alt=""></div> userexample1</div>
@@ -31,7 +41,7 @@
                     <div class="time padding-5px5px border-pill">2 min ago</div>
                 </div>
             </div>
-            <div class="line border-pill"></div>
+
             <div class="message flex-start-ce c-flex">
                 <div class="maker r-flex flex-space-even-center">
                     <div class="img padding-5px5px border-pill flex-ce-ce"><img src="profile-bot.svg" alt=""></div> userexample1</div>
@@ -40,7 +50,7 @@
                     <div class="time padding-5px5px border-pill">2 min ago</div>
                 </div>
             </div>
-            <div class="line border-pill"></div>
+
             <div class="message flex-start-ce c-flex">
                 <div class="maker r-flex flex-space-even-center">
                     <div class="img padding-5px5px border-pill flex-ce-ce"><img src="profile-bot.svg" alt=""></div> userexample1</div>
@@ -49,7 +59,7 @@
                     <div class="time padding-5px5px border-pill">2 min ago</div>
                 </div>
             </div>
-            <div class="line border-pill"></div>
+
             <div class="message flex-start-ce c-flex">
                 <div class="maker r-flex flex-space-even-center">
                     <div class="img padding-5px5px border-pill flex-ce-ce"><img src="profile-bot.svg" alt=""></div> userexample1</div>
@@ -58,16 +68,7 @@
                     <div class="time padding-5px5px border-pill">2 min ago</div>
                 </div>
             </div>
-            <div class="line border-pill"></div>
-            <div class="message flex-start-ce c-flex">
-                <div class="maker r-flex flex-space-even-center">
-                    <div class="img padding-5px5px border-pill flex-ce-ce"><img src="profile-bot.svg" alt=""></div> userexample1</div>
-                <div class="m r-flex flex-ce-ce">
-                    <div class="what">example message here because they are very very very confusing</div>
-                    <div class="time padding-5px5px border-pill">2 min ago</div>
-                </div>
-            </div>
-            <div class="line border-pill"></div>
+
             <div class="message flex-start-ce c-flex">
                 <div class="maker r-flex flex-space-even-center">
                     <div class="img padding-5px5px border-pill flex-ce-ce"><img src="profile-bot.svg" alt=""></div> userexample1</div>
@@ -78,21 +79,21 @@
             </div>
         </div>
         <div class="chat flex-c-c">
-            <div class="top-bar p-y-11 r-flex flex-space-even-center ">
+            <div class="top-bar p-y-105 r-flex flex-space-even-center ">
                 <div class="maker m-inline-10 r-flex flex-space-even-center ">
                     <div class="img padding-5px5px border-pill flex-ce-ce "><img src="profile-bot.svg " alt=" "></div> userexample1</div>
                 <div class="buttons ">
-                    <button id="error" class="toastbtn change-priority but-standard border-pill padding-5px10px"><i class="fa-solid fa-exclamation but-icon"></i>Change Priority</button>
-                    <button id="success" class="toastbtn label but-standard border-pill padding-5px10px"><i class="fa-solid fa-tags but-icon"></i>Label</button>
-                    <button id="success" class="toastbtn transfer but-standard border-pill padding-5px10px"><i class="fa-solid fa-arrow-right-arrow-left but-icon"></i>Transfer</button>
-                    <button id="success" class="toastbtn close but-fill border-pill padding-5px10px"><i class="fa-solid fa-lock but-icon"></i>Close</button>
+                    <button id="error" class="top-btn-close toastbtn change-priority but-light border-pill p-705px1205px"><i class="fa-solid fa-exclamation but-icon"></i>Change Priority</button>
+                    <button id="success" class="top-btn-close toastbtn label but-light border-pill p-705px1205px"><i class="fa-solid fa-tags but-icon"></i>Label</button>
+                    <button id="success" class="top-btn-close toastbtn transfer but-light border-pill p-705px1205px"><i class="fa-solid fa-arrow-right-arrow-left but-icon"></i>Transfer</button>
+                    <button id="success" class="toastbtn close but-main border-pill p-705px1205px"><i class="fa-solid fa-lock but-icon"></i>Close</button>
                 </div>
             </div>
             <div class="chat-window">
-
                 <div class="inner-chat"></div>
             </div>
-            <div class="input">
+            <div class="input r-flex flex-space-even-center">
+                <button class="actions border-pill"><i class="fa-solid fa-bolt"></i>Actions</button>
                 <input class="no-outline" onchange onpropertychange onkeyuponpaste oninput="text_change()" type=" text "><i class="fa-solid fa-paper-plane "></i></div>
         </div>
         <div class="details ">
