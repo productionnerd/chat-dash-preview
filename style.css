@@ -70,6 +70,10 @@
     display: flex;
 }
 
+.menu {
+    display: none;
+}
+
 .padding-5px10px {
     padding: 5px 10px;
 }
@@ -80,6 +84,10 @@
 
 .p-705px1205px {
     padding: 7.5px 12.5px;
+}
+
+.p-705px {
+    padding: 7.5px 11.5px;
 }
 
 .flex-center-start {
@@ -162,7 +170,7 @@
 
 .main-container {
     display: grid;
-    grid-template-columns: 0.25fr 0.35fr 1fr 0.40fr;
+    grid-template-columns: 0.30fr 0.35fr 1fr 0.40fr;
 }
 
 .nav {
@@ -350,7 +358,25 @@
 }
 
 .message:hover {
-    transform: scale(1.1);
+    background-color: rgb(238, 238, 238);
+}
+
+.activemsg:hover {
+    background-color: var(--lightgray);
+}
+
+.m-top {
+    padding-block: 19.6px;
+    font-weight: 600;
+}
+
+.m-top i {
+    margin-inline-start: 10px;
+}
+
+.inboxmenu {
+    cursor: pointer;
+    color: var(--gray);
 }
 
 .what {
@@ -358,6 +384,7 @@
     overflow: hidden;
     white-space: nowrap;
     margin-inline-end: 5px;
+    padding: 1px;
 }
 
 .time {
@@ -449,6 +476,15 @@
     }
     .time {
         font-size: 8px;
+    }
+    .menu {
+        display: block;
+    }
+    .buttons {
+        display: flex;
+    }
+    .nav {
+        font-size: 12px;
     }
 }
 
