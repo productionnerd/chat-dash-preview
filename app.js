@@ -56,3 +56,56 @@ function text_change() {
         sendButton.style.cursor = 'default';
     }
 }
+
+// Provide required variables:
+const
+    nav = document.querySelector('.nav'),
+    boxNav = nav.getBoundingClientRect(),
+    navLeft = boxNav.left,
+    navTop = boxNav.top,
+    navWidth = boxNav.width,
+    navHeight = boxNav.height,
+    frm = document.querySelector('.frame');
+// Move frame to new position:
+function moveFrame(elem) {
+    // elem is the element the frame should be moved to
+    const
+        box = elem.getBoundingClientRect(),
+        boxLeft = box.left,
+        boxTop = box.top,
+        boxWidth = box.width,
+        boxHeight = box.height,
+        // Element currently active:
+        activeEle = document.querySelector('.active');
+    // Shift frame to new position.
+    // Position is relative to container .nav
+    // therefore we have to subtract top and left
+    // of .nav:
+    frm.style.left = (boxLeft - navLeft) + 'px';
+    frm.style.top = (boxTop - navTop) + 'px';
+    frm.style.width = boxWidth + 'px';
+    frm.style.height = boxHeight + 'px';
+    // Remove class "active" from previous element:
+    if (activeEle) {
+        activeEle.classList.remove('active');
+    }
+    // Add class "active" to new element:
+    elem.classList.add('active');
+}
+
+// Position frame to initial element having class "active".
+// As fontawesome is loaded asynchronously we have to
+// wait until the font is ready:
+const firstActive = document.querySelector('.active');
+let timer = setInterval(() => {
+    if (firstActive.querySelector('i').getBoundingClientRect().width > 0) {
+        console.log('font awesome loaded');
+        moveFrame(firstActive);
+        clearInterval(timer);
+        // Subsequently we move the frame in an animated way:
+        frm.classList.add('animate');
+    }
+}, 10);
+window.addEventListener('click', event => {
+    moveFrame(event.target.closest('.page'));
+});

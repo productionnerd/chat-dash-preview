@@ -186,11 +186,47 @@
 }
 
 .page {
-    color: var(--gray);
+    color: grey;
     margin-block-start: 20px;
     display: flex;
     font-weight: 600;
     cursor: pointer;
+    padding: 7.5px 10px;
+    font-size: 13px;
+}
+
+.flex-column {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.nav {
+    background-color: white;
+    height: 100vh;
+    border-right: 1px solid lightgray;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+
+/* The frame is positioned absolutely and moved by javascript
+so that it's located above the active item */
+
+.frame {
+    position: absolute;
+    border-radius: 5vw;
+    outline: 2px solid var(--main);
+    display: none;
+}
+
+
+/* Animate position */
+
+.nav .frame.animate {
+    transition: all 0.3s ease;
+    display: block;
 }
 
 .page i {
@@ -201,12 +237,6 @@
 .page svg {
     transform: scale(1.3);
     margin-inline-end: 10px;
-}
-
-.active {
-    padding: 7.5px 10px;
-    border-radius: 50vw;
-    outline: 2px solid var(--main);
 }
 
 .chat-window {
