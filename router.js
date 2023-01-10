@@ -1,5 +1,21 @@
 'use strict';
 
+// Add loading the content in router.js:
+
+this.goToRoute = function(htmlName) {
+    var url = htmlName,
+        xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            // Add this:
+            // Put content received from the server into container <main>:
+            document.querySelector('main') = this.responseText;
+        }
+    };
+    xhttp.open('GET', url + '?t=' + Date.now(), true);
+    xhttp.send();
+};
+
 function Router(routes) {
     this.routes = routes;
     const that = this;
