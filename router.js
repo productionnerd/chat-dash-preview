@@ -42,7 +42,11 @@ function Router(routes) {
         var url = htmlName,
             xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {}
+            if (this.readyState === 4 && this.status === 200) {
+                // Add this:
+                // Put content received from the server into container <main>:
+                document.querySelector('main').innerHTML = this.responseText;
+            }
         };
         xhttp.open('GET', url + '?t=' + Date.now(), true);
         xhttp.send();
