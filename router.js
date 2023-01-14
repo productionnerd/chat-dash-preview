@@ -9,7 +9,7 @@ this.goToRoute = function(htmlName) {
         if (this.readyState === 4 && this.status === 200) {
             // Add this:
             // Put content received from the server into container <main>:
-            document.querySelector('main') = this.responseText;
+            document.querySelector('main').innerHTML = this.responseText;
         }
     };
     xhttp.open('GET', url + '?t=' + Date.now(), true);
