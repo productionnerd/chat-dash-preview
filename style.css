@@ -26,6 +26,10 @@ a {
     font-family: 'poppins';
 }
 
+body {
+    display: flex;
+}
+
 
 /*utility classes */
 
@@ -174,7 +178,7 @@ a {
 
 .main-container {
     display: grid;
-    grid-template-columns: 0.30fr 0.35fr 1fr 0.40fr;
+    grid-template-columns: 1.1fr 6.63fr 0.20fr;
 }
 
 .nav {
@@ -193,10 +197,10 @@ a {
     color: grey;
     margin-block-start: 20px;
     display: flex;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     padding: 7.5px 10px;
-    font-size: 13px;
+    white-space: nowrap;
 }
 
 .flex-column {
@@ -525,6 +529,13 @@ so that it's located above the active item */
 @media (max-height: 600px) {
     .input {
         height: 9.5vh;
+    }
+}
+
+@media (min-width: 1564px) {
+    .input {
+        width: 65% !important;
+        height: 6% !important;
     }
 }
 

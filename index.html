@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="toastnotifs.css">
+    <link rel="stylesheet" href="chatbot.css">
     <script src="https://kit.fontawesome.com/80c5496e3a.js" crossorigin="anonymous"></script>
     <title>Dashboard - Flow Chat</title>
 </head>
@@ -14,25 +15,25 @@
 <body>
     <div class="nav flex-column">
         <div class="frame"></div>
-        <a data-link-name="home" href="index.html">
+        <a data-link-name="home" data-link-title="Dashboard - Flowchat" href="home.html">
             <div class="page active"><i class="fa-solid fa-house-chimney"></i>Home</div>
         </a>
-        <a data-link-name="inbox" href="inbox.html">
+        <a data-link-name="inbox" data-link-title="Inbox - Flowchat" href="inbox.html">
             <div class="page"><i class="fa-solid fa-inbox"></i>Inbox</div>
         </a>
-        <a data-link-name="chatbots" href="chatbots.html">
+        <a data-link-name="chatbots" data-link-title="Chatbots - Flowchat" href="chatbots.html">
             <div class="page"> <img class="botprofile" src="profile-bot.svg" alt="">Chatbots</div>
         </a>
-        <a data-link-name="employees" href="Employees.html">
+        <a data-link-name="employees" data-link-title="Employees - Flowchat" href="Employees.html">
             <div class="page"><i class="fa-solid fa-people-group"></i>Employees</div>
         </a>
-        <a data-link-name="users" href="Users.html">
+        <a data-link-name="users" data-link-title="Users - Flowchat" href="Users.html">
             <div class="page"><i class="fa-solid fa-user"></i>Users</div>
         </a>
-        <a data-link-name="settings" href="settings.html">
+        <a data-link-name="settings" data-link-title="Company Settings - Flowchat" href="settings.html">
             <div class="page"><i class="fa-solid fa-building"></i>Company Settings</div>
         </a>
-        <a data-link-name="prefrences" href="Prefrences.html">
+        <a data-link-name="prefrences" data-link-title="Prefrences - Flowchat" href="Prefrences.html">
             <div class="page"><i class="fa-solid fa-gears"></i>Prefrences</div>
         </a>
     </div>
@@ -43,23 +44,26 @@
     <script src="route.js"></script>
     <script src="router.js"></script>
     <script>
+        // javascript in index.html:
         function prepareLinks(selector) {
             let mapRoutes = [];
             document.querySelectorAll(selector).forEach(function(item, idx) {
                 linkName = item.dataset.linkName;
+                linkTitle = item.dataset.linkTitle;
                 if (linkName) {
                     mapRoutes.push({
                         url: item.href,
-                        linkName: linkName
+                        linkName: linkName,
+                        linkTitle: linkTitle
                     });
                     item.href = '#' + linkName;
                 }
             });
             const routes = mapRoutes.map(function(item, idx) {
                 if (item.linkName == 'home')
-                    return new Route(item.linkName, item.url, true);
+                    return new Route(item.linkName, item.linkTitle, item.url, true);
                 else
-                    return new Route(item.linkName, item.url);
+                    return new Route(item.linkName, item.linkTitle, item.url);
             });
             return routes;
         }

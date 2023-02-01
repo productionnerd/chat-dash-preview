@@ -1,21 +1,5 @@
 'use strict';
 
-// Add loading the content in router.js:
-
-this.goToRoute = function(htmlName) {
-    var url = htmlName,
-        xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-            // Add this:
-            // Put content received from the server into container <main>:
-            document.querySelector('main').innerHTML = this.responseText;
-        }
-    };
-    xhttp.open('GET', url + '?t=' + Date.now(), true);
-    xhttp.send();
-};
-
 function Router(routes) {
     this.routes = routes;
     const that = this;
@@ -26,19 +10,19 @@ function Router(routes) {
             for (var i = 0, length = r.length; i < length; i++) {
                 var route = r[i];
                 if (route.isActiveRoute(window.location.hash.substr(1))) {
-                    this.goToRoute(route.htmlName);
+                    this.goToRoute(route.htmlName, route.linkTitle);
                 }
             }
         } else {
             for (var i = 0, length = r.length; i < length; i++) {
                 var route = r[i];
                 if (route.default) {
-                    this.goToRoute(route.htmlName);
+                    this.goToRoute(route.htmlName, route.linkTitle);
                 }
             }
         }
     }
-    this.goToRoute = function(htmlName) {
+    this.goToRoute = function(htmlName, linkTitle) {
         var url = htmlName,
             xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -46,6 +30,7 @@ function Router(routes) {
                 // Add this:
                 // Put content received from the server into container <main>:
                 document.querySelector('main').innerHTML = this.responseText;
+                document.title = linkTitle;
             }
         };
         xhttp.open('GET', url + '?t=' + Date.now(), true);

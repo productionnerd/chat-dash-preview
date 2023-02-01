@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --color-light: #2176ff;
+    --color-primary-500: #2151ff;
+    --color-primary-600: #283db9;
+    --color-primary-700: #242a77;
+    --color-primary-800: #19193c;
+    --color-primary-900: #000000;
+    --main: var(--color-primary-500);
+    --shadow: 4px 6px 42px -16px rgba(0, 0, 0, 0.43);
+    --gray: #5e5e5e;
+    --lightgray: lightgray;
+    --dark: #34495e;
+    --light: #eaeaea;
+    --success: #0abf30;
+    --error: #e24d4c;
+    --warning: #e9bd0c;
+    --info: #3498db;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    font-family: 'poppins';
+}
+
+body {
+    display: flex;
+}
+
+
+/*utility classes */
+
+.border-pill {
+    border-radius: 50vw;
+}
+
+.flex-column {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.flex-c-c {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-ce-ce {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-start-ce {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-space-even-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.c-flex {
+    flex-direction: column;
+    display: flex;
+}
+
+.r-flex {
+    flex-direction: row;
+    display: flex;
+}
+
+.menu {
+    display: none;
+}
+
+.padding-5px10px {
+    padding: 5px 10px;
+}
+
+.padding-5px5px {
+    padding: 5px;
+}
+
+.p-705px1205px {
+    padding: 7.5px 12.5px;
+}
+
+.p-705px {
+    padding: 7.5px 11.5px;
+}
+
+.flex-center-start {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.but-light {
+    background-color: var(--color-light);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.but-main {
+    background-color: var(--main);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.but-main:hover {
+    background-color: var(--color-primary-700);
+}
+
+.but-light:hover {
+    background-color: var(--main);
+}
+
+.m-end-10 {
+    margin-inline-end: 10px;
+}
+
+.m-start-10 {
+    margin-inline-start: 10px;
+}
+
+.m-inline-10 {
+    margin-inline: 10px;
+}
+
+.m-top-10 {
+    margin-block-start: 10px;
+}
+
+.m-botom-10 {
+    margin-block-end: 10px;
+}
+
+.m-block-10 {
+    margin-block: 10px;
+}
+
+.p-y-105 {
+    padding-block: 10.5px;
+}
+
+
+/*utility classes */
+
+.main-template {
+    background-color: white;
+    border-radius: 20px;
+    width: 100px;
+    height: 80px;
+}
+
+.template-cage {
+    gap: 10px;
+}
+
+.recommended {}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
